@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="ProX: Lifting Pre-training Data Quality Like Experts">
+    <meta property="og:image" content="./static/icons/banner.jpg" />
+    <meta name="keywords" content="LLM Pre-training, Data Refining, Programming">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ProX: Lifting Pre-training Data Quality Like Experts</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-PYVRSFMDRL');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/icons/banner.jpg">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <div class="navbar-menu">
+    </div>
+
+    </div>
+</nav>
+
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title">Programming Every Example: Lifting Pre-training Data Quality Like Experts at Scale</em></h1>
+                    <div class="is-size-5 publication-authors">
+                    <span class="author-block">
+                    <a href="https://koalazf99.github.io/">Fan Zhou</a><sup>1,4,*</sup>,
+                    </span>
+                    <span class="author-block">
+                    <a href="http://tinyurl.com/zengzhi-homepage/">Zengzhi Wang</a><sup>1,4,*</sup>,
+                    </span>
+                    <span class="author-block">
+                    <a href="https://siviltaram.github.io/">Qian Liu</a><sup>3</sup>,
+                    </span>
+                    <span class="author-block">
+                    <a href="https://lockon-n.github.io/">Junlong Li</a><sup>4</sup>,
+                    </span>
+                    <span class="author-block">
+                    <a href="https://plms.ai/people/index.html/">Pengfei Liu</a><sup>1,2,4,$</sup>,
+                    </span>
+                    </div>
+
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block"><sup>1</sup>Shanghai Jiao Tong University</span>
+
+                        <span class="author-block"><sup>2</sup>Shanghai Artificial Intelligence Laboratory</span>
+                        <br>
+                        <span class="author-block"><sup>3</sup>Sea AI Lab</span>
+                        <span class="author-block"><sup>4</sup>Generative Artificial Intelligence Research Lab (GAIR)</span>
+                        <br>
+                        <span class="author-block"><sup>*</sup>Equal Contribution</span>
+                        <span class="author-block"><sup>$</sup>Corresponding Author</span>
+                    </div>
+
+                    <div class="is-size-5 publication-authors" style="margin-bottom: 1rem;">
+                        <span class="author-block">
+                          <div style="display: flex; align-items: center;">
+                            <span style="vertical-align: middle;">
+                                <a href="https://en.sjtu.edu.cn/"><img src="./static/icons/sjtu-logo.svg" style="height: 2.5rem; margin-right: 5px; vertical-align: middle;"></a>
+                                <a href="https://www.shlab.org.cn/"><img src="./static/icons/shai-logo.png" style="height: 2.5rem; margin-right: 5px; vertical-align: middle;"></a>
+                                <a href="https://sail.sea.com/"><img src="./static/icons/seaai-logo.png" style="height: 2.5rem; margin-right: 5px; vertical-align: middle;"></a>
+                                <a href="https://plms.ai/people/index.html"><img src="./static/icons/gair-logo.png" style="height: 2.5rem; margin-right: 5px; vertical-align: middle;"></a>
+                            </span>
+                        </div>
+                        </span>
+                    </div>
+
+                    <div class="column has-text-centered">
+                        <!-- PDF Link. -->
+                        <span class="link-block">
+                            <a href="https://arxiv.org/abs/xxxx.xxxxx" class="external-link button is-normal is-rounded is-dark">
+                            <span class="icon">
+                                                <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"></path></svg><!-- <i class="fas fa-file-pdf"></i> Font Awesome fontawesome.com -->
+                            </span>
+                            <span>Paper</span>
+                            </a>
+                        </span>
+                        <!-- Code Link. -->
+                        <span class="link-block">
+                            <a href="https://github.com/GAIR-NLP/program-every-example" class="external-link button is-normal is-rounded is-dark">
+                                <span class="icon">
+                                            <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github"></i> Font Awesome fontawesome.com -->
+                                        </span>
+                                <span>Code</span>
+                            </a>
+                        </span>
+                        <!-- Data Link. -->
+                        <span class="link-block">
+                            <a href="https://huggingface.co/collections/GAIR/xxxx"
+                               class="external-link button is-normal is-rounded is-dark">
+                                <span class="icon">
+                                    <img src="./static/icons/huggingface_logo.svg" width="20px">
+                                </span>
+                               <span>Data</span>
+                               </a>
+                        </span>
+                        <!-- Model Link. -->
+                        <span class="link-block">
+                            <a href="https://huggingface.co/collections/GAIR/xxxx"
+                               class="external-link button is-normal is-rounded is-dark">
+                                <span class="icon">
+                                    <img src="./static/icons/huggingface_logo.svg" width="20px">
+                                </span>
+                               <span>Model</span>
+                               </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+<!-- Abstract. -->
+<div class="columns is-centered has-text-centered" style="font-size: 18px;">
+<div class="column is-four-fifths">
+    <h1 class="title is-3">Overview</h1>
+    <div class="content has-text-justified" >
+
+        <div>
+        <p>🚀 We develop <b>ProX</b>, a lm-based framework used to improve pre-training data quality via generating programs.</p>
+        ProX go through 2 refining stages focusing on different scopes: <b>document level</b> and <b>chunk level</b>. We use very small language models (e.g., 🐣0.3B) to generate programs for each example in the training data, and then use these programs together with a Python Executor to refine the data.
+        The curated data proves to be more effective in training large language models (e.g., 🐘1.7B) than the original data.
+        ProX also shows its effectiveness in improving the performance in mathematical continual pre-training, producing 5%~10% improvement over large models such as <a href=https://huggingface.co/mistralai/Mistral-7B-v0.1>Mistral-7B</a> and <a href=https://huggingface.co/meta-llama/Llama-2-7b-hf>Llama-7B</a>.
+
+        </div>
+    </div>
+</div>
+</div>
+<!--/ Abstract. -->
+
+      <!-- Leaderboard. -->
+<div class="columns is-centered has-text-centered" style="font-size: 18px;">
+    <div class="column is-four-fifths">
+        <h1 class="title is-3">Prox Framework</h1>
+        <div class="content has-text-justified">
+            <p>We present the benchmarking results for two tasks: the pairwise response comparison leaderboard and the critique generation leaderboard.</p>
+            <div class="content has-text-justified">
+                <figure>
+                    <img src="./static/images/prox_framework.png" style="zoom: 60%;" alt="Description of first image">
+                    <figcaption>
+                        ProX Frameworks, lifting pre-training data quality by generating programs for each example in the training data.
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ Leaderboard. -->
+
+
+
+
+      <!-- Demo -->
+<div class="columns is-centered has-text-centered" style = "font-size: 16px;">
+<div class="column is-four-fifths">
+    <h1 class="title is-3">Pipeline</h1>
+    <div class="content has-text-justified">
+        <figure>
+            <img src="./static/images/prox_pipeline.png" style="zoom: 60%;" alt="Description of first image">
+            <figcaption>
+                ProX Adaptation Pipeline.
+            </figcaption>
+        </figure>
+
+        <!-- Second figure -->
+        <!-- <figure>
+            <img src="./static/images/program_space.png" style="zoom: 40%;" alt="Description of second image">
+            <figcaption>Prox Program Design.
+            </figcaption>
+        </figure> -->
+        <table border="1" cellspacing="0" cellpadding="5">
+            <caption>ProX Program Design</caption>
+            <tr>
+              <th>Stage</th>
+              <th>Function Interface</th>
+              <th>Function Description</th>
+            </tr>
+            <tr>
+              <td rowspan="2">Document<br>Level</td>
+              <td>drop_doc()</td>
+              <td>Delete the document from corpus.</td>
+            </tr>
+            <tr>
+              <td>keep_doc()</td>
+              <td>Keep the document in corpus.</td>
+            </tr>
+            <tr>
+              <td rowspan="3">Chunk<br>Level</td>
+              <td>remove_lines(line_start:int, line_end:int)</td>
+              <td>Delete noisy lines from the chunk.</td>
+            </tr>
+            <tr>
+              <td>normalize(source_str:str, target_str:str)</td>
+              <td>Replace strings with normalized ones.</td>
+            </tr>
+            <tr>
+              <td>skip_chunk()</td>
+              <td>Keep the chunk as it is.</td>
+            </tr>
+          </table>  
+    </div>
+</div>
+</div>
+<!-- Demo -->
+
+
+<!-- Methodology -->
+<div class="columns is-centered has-text-centered" style = "font-size: 16px;">
+<div class="column is-four-fifths">
+    <h1 class="title is-3">Methodology</h1>
+    <div class="content has-text-justified">
+        <figure>
+            <img src="./figs/data_collection_pipeline.png" style="zoom: 100%;" alt="Description of second image">
+        </figure>
+<!--        <p>We first define 58 different scenarios that can be merged into 8 major groups. For each scenario, we also-->
+<!--            manually design a set of criteria. We collect data from real-world user queries and responses from various chatbots, and classify the queries-->
+<!--            based on our defined scenarios with the help of our newly-trained scenario classifier. Then we use GPT-4 to generate the judgment for both our pairwise data (3,436 samples) and single-response data (960-->
+<!--            samples) with the criteria for each scenario as a reference. Specifically, GPT-4 is required to generate a comprehensive judgment for a data sample from two aspects:-->
+<!--            1) referring to the criteria for each scenario and 2) brainstorming more specific points for this sample.-->
+<!--            The judgment for pairwise response comparison are the key factors to distinguish the two responses and the-->
+<!--            final verdict (i.e., which response is better or tie), and the judgment for single-response evaluation are the critiques and an overall rating.-->
+<!--            These judgments, along with the user query and the responses, constitute our training data.-->
+<!--        In training, we use both the pairwise comparison and single-response data to train Auto-J, so that it can seamlessly toggle between these two evaluation protocols simply by applying the corresponding prompts.-->
+<!--        We also construct new testbeds with a balanced scenario distribution for assessing the effectiveness of different functionalities of Auto-J on pairwise response comparison and single-response evaluation.</p>-->
+        <p>
+            We begin by defining 58 scenarios, which we then condense into 8 major groups.
+            Each scenario is accompanied by a set of manually designed criteria.
+            We collect real-world user queries and responses from various chatbots and categorize the queries using our newly trained scenario classifier.
+            We then employ GPT-4 to generate judgments for both our pairwise data (3,436 samples) and single-response data (960 samples) using the respective scenario criteria as a reference.
+            Specifically, GPT-4 is tasked with providing comprehensive judgments for each data sample, considering both the predefined criteria for each scenario and brainstorming specific points.
+            The judgment for pairwise response comparison contains the key factors in distinguishing between the two responses and the final verdict (i.e., which response is better or if they are tied), while the judgment for single-response evaluation includes critiques and an overall rating.
+            These judgments, together with the user queries and responses, form our training data.
+            During training, we utilize both pairwise comparisons and single-response data to train Auto-J, enabling it to seamlessly switch between these two evaluation protocols by simply applying the appropriate prompts.
+            We also create new testbeds with a balanced distribution on different scenarios to assess Auto-J's effectiveness in pairwise response comparison and single-response evaluation.
+        </p>
+    </div>
+</div>
+</div>
+<!-- Methodology -->
+
+
+
+<!-- Results -->
+<div class="columns is-centered has-text-centered" style = "font-size: 18px;">
+<div class="column is-four-fifths">
+    <h1 class="title is-3">Results</h1>
+    <div class="content has-text-justified">
+        <figure>
+            <img src="./static/images/prox_effectiveness.png" style="zoom: 38%;" alt="Description of second image">
+            <figcaption>Prox's 2-stage effectiveness and comparison wi
+
+            <img src="./figs/critique_performance.png" style="zoom: 43%;" alt="Description of second image">
+            <figcaption>Win-rate against baselines in critique generation, judged by GPT-4 and humans.</figcaption>
+
+            <img src="./figs/rating_performance.png" style="zoom: 40%;" alt="Description of second image">
+            <figcaption>Auto-J's single-response ratings as rewards to select the best response among N candidates by a base model, then use GPT-4 to rate the selected responses.</figcaption>
+
+            <img src="./figs/alpaca_eval_alternative.png" style="zoom: 52%;" alt="Description of second image">
+            <figcaption>Reranking the open-source models submitted to <a href="https://tatsu-lab.github.io/alpaca_eval/">AlpacaEval Leaderboard</a> by Auto-J's single-response overall ratings.</figcaption>
+        </figure>
+
+    </div>
+</div>
+</div>
+<!-- Results -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{2024prox,
+  title={Programming Every Example: Lifting Pre-training Data Quality Like Experts at Scale},
+  author={},
+  journal={arXiv preprint arXiv:xxxx.xxxxx},
+  year={2024}
+}</code></pre>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="columns is-centered">
+        <div class="column is-8">
+            <div class="content">
+                <p>
+                    This website is licensed under a <a rel="license"
+                                                        href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                    Commons Attribution-ShareAlike 4.0 International License</a>.
+                </p>
+                <p>
+                    This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source
+                    code</a> of this website,
+                    we just ask that you link back to this page in the footer.
+                    Please remember to remove the analytics code included in the header of the website which
+                    you do not want on your website.
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+</footer>
+
+</body>
+</html>
