@@ -1,0 +1,39 @@
+model: tiny_LLaMA_0_3b
+name: tiny_LLaMA_0_3b
+
+train_data_dir: ${TOKENIZE_DATA_DIR}/redpj_400B
+val_data_dir: null
+out_dir: ${PT_MODEL_OUTPUT_DIR}/exp2/pt_llama_0_3b_redpj_25B_raw
+
+# hy-params
+num_of_nodes: 8
+num_of_devices: 8
+global_batch_size: 1024
+learning_rate: 0.0005
+micro_batch_size: 16
+# token estimation: 12500(gsteps) * 1024(gbsize) * 2048(seq_len) = 25B
+max_step: 12500
+
+warmup_steps: 500
+log_step_interval: 10
+eval_iters: 100
+save_step_interval: 500
+eval_step_interval: 500
+weight_decay: 0.1
+beta1: 0.9
+beta2: 0.95
+grad_clip: 1.0
+decay_lr: true
+min_lr: 0.00005
+
+is_constant_lr: false
+need_to_warm: True
+only_validate: false
+
+# wandb
+project: ${WANDB_PROJECT}
+entity: ${WANDB_ENTITY}
+name: pt_llama_0_3b_redpj_25B_raw
+
+train_data_config:
+  - ["llama_dump_2/train_redpj", 1.0]

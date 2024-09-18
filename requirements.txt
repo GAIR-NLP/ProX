@@ -1,0 +1,23 @@
+accelerate==0.21.0
+bitsandbytes==0.40.0
+einops==0.6.1
+evaluate==0.4.0
+jsonargparse[signatures]  # CLI
+lightning==2.1.2
+lightning[app]
+pandas
+peft==0.4.0
+pyarrow
+scikit-learn==1.2.2
+sentencepiece
+sentencepiece==0.1.99
+tokenizers
+torch>=2.1.0dev
+transformers==4.42.4
+msgpack
+zstd
+nltk
+zstandard==0.22.0
+datatrove==0.3.0
+wandb==0.14.2
+numpy==1.26.4
