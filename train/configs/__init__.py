@@ -52,9 +52,9 @@ class TinyLMConfig:
     initial_checkpoint_dir: str = ""
 
     # WandB Config
-    project: str = "tinylm"
-    entity: str = "fanzhou"
-    name: str = "refined_web_500B"
+    project: str = "prox"
+    entity: str = "prox"
+    name: str = "fineweb-pro"
 
     train_data_config: list = field(default_factory=lambda: [("train_star", 1.0)])
     val_data_config: list = field(default_factory=lambda: None)
