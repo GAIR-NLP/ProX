@@ -1,9 +1,9 @@
-model: tiny_LLaMA_0_3b
-name: tiny_LLaMA_0_3b
+model: tiny_LLaMA_0_7b
+name: tiny_LLaMA_0_7b
 
 train_data_dir: ${TOKENIZE_DATA_DIR}/RedPajama-pro
 val_data_dir: null
-out_dir: ${PT_MODEL_OUTPUT_DIR}/pt_llama_0_3b_redpj_25B_prox
+out_dir: ${PT_MODEL_OUTPUT_DIR}/pt_llama_0_7b_redpj_25B_prox
 
 # hy-params
 num_of_nodes: 8
@@ -11,8 +11,7 @@ num_of_devices: 8
 global_batch_size: 1024
 learning_rate: 0.0005
 micro_batch_size: 16
-# token estimation: 12500(gsteps) * 1024(gbsize) * 2048(seq_len) = 25B
-max_step: 1000
+max_step: 12500
 
 warmup_steps: 500
 log_step_interval: 10
@@ -33,7 +32,7 @@ only_validate: false
 # wandb
 project: ${WANDB_PROJECT}
 entity: ${WANDB_ENTITY}
-name: pt_llama_0_3b_redpj_25B_prox
+name: pt_llama_0_7b_redpj_25B_prox
 
 train_data_config:
   - ["llama/train_web", 1.0]

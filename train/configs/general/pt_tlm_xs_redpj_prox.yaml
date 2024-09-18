@@ -1,9 +1,9 @@
 model: tiny_LLaMA_0_3b
 name: tiny_LLaMA_0_3b
 
-train_data_dir: ${TOKENIZE_DATA_DIR}/redpj_400B
+train_data_dir: ${TOKENIZE_DATA_DIR}/RedPajama-pro
 val_data_dir: null
-out_dir: ${PT_MODEL_OUTPUT_DIR}/exp2/pt_llama_0_3b_redpj_25B_raw
+out_dir: ${PT_MODEL_OUTPUT_DIR}/pt_llama_0_3b_redpj_25B_prox
 
 # hy-params
 num_of_nodes: 8
@@ -33,7 +33,7 @@ only_validate: false
 # wandb
 project: ${WANDB_PROJECT}
 entity: ${WANDB_ENTITY}
-name: pt_llama_0_3b_redpj_25B_raw
+name: pt_llama_0_3b_redpj_25B_prox
 
 train_data_config:
-  - ["llama_dump_2/train_redpj", 1.0]
+  - ["llama/train_web", 1.0]

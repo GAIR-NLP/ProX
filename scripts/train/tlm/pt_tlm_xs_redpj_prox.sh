@@ -27,8 +27,8 @@ cd train
 
 export PYTHONPATH=$PYTHONPATH:$TINYLM_WORK_DIR/train
 
-# srun python pretrain/tinyllama.py \
-#     --config_path configs/tlm/pt_tlm_xs_redpj_prox.yaml
+srun python pretrain/tinyllama.py \
+    --config_path configs/general/pt_tlm_xs_redpj_prox.yaml
 
 cd $TINYLM_WORK_DIR
 conda activate tinylm
@@ -40,7 +40,7 @@ python -m scripts.weight_conversion.batch_model_conversion \
 
 # model step list is from 1 ~ 25
 export NNODES=8
-export TOTAL_STEPS=2
+export TOTAL_STEPS=25
 export SAVE_STEP_INTERVAL=1
 
 cd $TINYLM_WORK_DIR
