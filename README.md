@@ -53,7 +53,7 @@ Currently, ProX curated data have gone through 2 levels programming + executing:
 - Better Performance: Models trained with ProX-refined data perform over 2% better than those trained with raw or rule-based data.
 - Domain Flexibility: ProX works well across different domains, boosting accuracy by up to 20% in tasks like math, without needing special manual adjustments.
 - Efficient and Scalable: Even small models (as little as 0.3B parameters) can refine data effectively, similar to human experts, saving resource compared to LLM-based data synthesis.
-- Cost-Effective: In general, ProX saves on training compute while maintaining strong results.
+- Cost-Effective: In general, ProX could significantly save on training compute while maintaining strong results.
 
 ## Setup
 
@@ -112,7 +112,10 @@ pip install -e .
 <p>
 
 ```bash
-#TODO
+git clone https://github.com/GAIR-NLP/math-evaluation-harness.git
+conda create -n math_eval python=3.10
+conda activate math_eval
+pip install -r requirements.txt
 ```
 
 </p>
@@ -120,7 +123,7 @@ pip install -e .
 
 ## Training on ProX curated data
 
-We provide over 100B high quality general domain corpus and ~5B high quality math corpus. You can train your own model using this data.
+We provide over 100B high quality general domain corpus and ~5B high quality math corpus. You can directly train your own model using these data.
 
 Here we provide an example to download, tokenize, train a model using ProX data with litgpt, finally with thorough evaluation.
 Feel free to modify the script to fit your own needs.
@@ -217,7 +220,15 @@ python -m scripts.eval.base_evaluation \
 For math evaluation, you can refer to the following script, after you have installed math-eval and converted the model to HF format:
 
 ```bash
-TODO
+# alter the work dir and activate the conda env
+cd math-evaluation-harness
+conda activate math_eval
+
+# eval on all benchmarks
+bash auto_dir_run.sh ${your_model_folder_path}
+
+# summarize all results of all intermediate ckpts in your_model_folder_path
+python gather_results.py --do_all_ckpts --dir_path outputs/${your_model_folder_path}
 ```
 
 ## Development
