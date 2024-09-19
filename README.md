@@ -113,6 +113,7 @@ pip install -e .
 
 ```bash
 git clone https://github.com/GAIR-NLP/math-evaluation-harness.git
+cd math-evaluation-harness
 conda create -n math_eval python=3.10
 conda activate math_eval
 pip install -r requirements.txt

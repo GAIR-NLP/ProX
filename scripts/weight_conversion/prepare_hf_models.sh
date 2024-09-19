@@ -29,25 +29,14 @@ mv ${raw_model_dir}/config.json ${out_model_dir}/${target_name}
 # download the config file
 cd ${out_model_dir}/${target_name}
 HF_ENDPOINT=https://huggingface.co
-if [ "$model_name" = "tiny_LLaMA_0_3b" ]; then
-    # download and overwrite the json file
-    cp $scripts_dir/vocab_files/llama_hf/* .  
-fi
-if [ "$model_name" = "tiny_LLaMA_0_7b" ]; then
-    # download and overwrite the json file
-    cp $scripts_dir/vocab_files/llama_hf/* .    
-fi
-if [ "$model_name" = "tiny_LLaMA_1b" ]; then
-    cp $scripts_dir/vocab_files/llama_hf/* .  
-fi
-if [ "$model_name" = "tiny_LLaMA_1_7b" ]; then
-    cp $scripts_dir/vocab_files/llama_hf/* .    
-fi
-if [ "$model_name" = "tiny_LLaMA_3b" ]; then
+if [ "$model_name" = "tiny_LLaMA_0_3b" ] || [ "$model_name" = "tiny_LLaMA_0_7b" ] || [ "$model_name" = "tiny_LLaMA_1b" ] || [ "$model_name" = "tiny_LLaMA_1_7b" ] || [ "$model_name" = "Llama-2-7b-hf" ]; then
     cp $scripts_dir/vocab_files/llama_hf/* .    
 fi
 if [ "$model_name" == "Mistral-7B-v0.1" ]; then
     cp $scripts_dir/vocab_files/mistral_hf/* .
+fi
+if echo "$model_name" | tr '[:upper:]' '[:lower:]' | grep -q "codellama"; then
+    cp $scripts_dir/vocab_files/codellama_hf/* .
 fi
 
 cd ../../
