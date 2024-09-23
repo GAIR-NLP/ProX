@@ -1,0 +1,43 @@
+model: Llama-2-7b-hf
+name: Llama-2-7b-hf
+
+train_data_dir: ${TOKENIZE_DATA_DIR}/open-web-math-pro
+val_data_dir: null
+out_dir: ${PT_MODEL_OUTPUT_DIR}/cpt_llama_2_owm_15B_prox
+
+# hy-params
+num_of_nodes: 8
+num_of_devices: 8
+global_batch_size: 256
+learning_rate: 0.00008
+micro_batch_size: 4
+max_step: 15000
+
+# token estimation
+warmup_steps: 0
+log_step_interval: 10
+eval_iters: 100
+save_step_interval: 1000
+eval_step_interval: 1000
+weight_decay: 0.1
+beta1: 0.9
+beta2: 0.95
+grad_clip: 1.0
+decay_lr: true
+min_lr: 0.000008
+
+is_continue_pt: true
+initial_checkpoint_dir: ${PERSONAL_STORAGE_DIR}/ckpts/Llama-2-7b-hf/lit_model.pth
+
+
+is_constant_lr: false
+need_to_warm: false
+only_validate: false
+
+# wandb
+project: ${WANDB_PROJECT}
+entity: ${WANDB_ENTITY}
+name: cpt_llama_2_7b_owm_15B_prox
+
+train_data_config:
+  - ["train_owm", 1.0]

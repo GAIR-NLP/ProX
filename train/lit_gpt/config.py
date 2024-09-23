@@ -739,24 +739,24 @@ llama_2 = [
         _mlp_class="LLaMAMLP",
         intermediate_size=11008,
     ),
-    dict(
-        org="meta-llama",
-        name="CodeLlama-2-7b-hf",
-        block_size=4096,
-        vocab_size=32016,
-        padded_vocab_size=32016,
-        padding_multiple=64,
-        n_layer=32,
-        n_head=32,
-        n_embd=4096,
-        rotary_percentage=1.0,
-        parallel_residual=False,
-        bias=False,
-        _norm_class="RMSNorm",
-        norm_eps=1e-5,
-        _mlp_class="LLaMAMLP",
-        intermediate_size=11008,
-    ),
+    # dict(
+    #     org="meta-llama",
+    #     name="CodeLlama-2-7b-hf",
+    #     block_size=4096,
+    #     vocab_size=32016,
+    #     padded_vocab_size=32016,
+    #     padding_multiple=64,
+    #     n_layer=32,
+    #     n_head=32,
+    #     n_embd=4096,
+    #     rotary_percentage=1.0,
+    #     parallel_residual=False,
+    #     bias=False,
+    #     _norm_class="RMSNorm",
+    #     norm_eps=1e-5,
+    #     _mlp_class="LLaMAMLP",
+    #     intermediate_size=11008,
+    # ),
     # https://huggingface.co/meta-llama/Llama-2-13b-hf/blob/main/config.json
     dict(
         org="meta-llama",
@@ -800,6 +800,65 @@ for c in llama_2:
         copy = c.copy()
         copy["name"] = c["name"].format(kind)
         configs.append(copy)
+
+
+##################
+# Meta Code Llama
+##################
+code_llama = [
+    # https://huggingface.co/codellama/CodeLlama-7b-hf/blob/main/config.json
+    dict(
+        org="meta-llama",
+        name="CodeLlama-7b-hf",
+        block_size=16384,
+        vocab_size=32016,
+        padding_multiple=16,
+        n_layer=32,
+        rotary_percentage=1.0,
+        parallel_residual=False,
+        bias=False,
+        _norm_class="RMSNorm",
+        norm_eps=1e-05,
+        _mlp_class="LLaMAMLP",
+        intermediate_size=11008,
+        rope_base=1000000,
+    ),
+    # custom config for exp training
+    dict(
+        org="meta-llama",
+        name="CodeLlama-7b-hf-4k-1M",
+        block_size=4096,
+        vocab_size=32016,
+        padding_multiple=16,
+        n_layer=32,
+        rotary_percentage=1.0,
+        parallel_residual=False,
+        bias=False,
+        _norm_class="RMSNorm",
+        norm_eps=1e-05,
+        _mlp_class="LLaMAMLP",
+        intermediate_size=11008,
+        rope_base=1000000,
+    ),
+    # custom config for exp training
+    dict(
+        org="meta-llama",
+        name="CodeLlama-7b-hf-4k-10k",
+        block_size=4096,
+        vocab_size=32016,
+        padding_multiple=16,
+        n_layer=32,
+        rotary_percentage=1.0,
+        parallel_residual=False,
+        bias=False,
+        _norm_class="RMSNorm",
+        norm_eps=1e-05,
+        _mlp_class="LLaMAMLP",
+        intermediate_size=11008,
+        rope_base=10000,
+    ),
+]
+configs.extend(code_llama)
 
 
 ##########################

@@ -49,6 +49,9 @@ fi
 if [ "$model_name" == "Mistral-7B-v0.1" ]; then
     cp $scripts_dir/vocab_files/mistral_hf/* .
 fi
+if echo "$model_name" | tr '[:upper:]' '[:lower:]' | grep -q "codellama"; then
+    cp $scripts_dir/vocab_files/codellama_hf/* .
+fi
 
 cd ../../
 
