@@ -39,7 +39,6 @@ if __name__ == "__main__":
     hf_model_dir = os.path.join(HF_MODEL_OUTPUT_DIR, args.hf_model_dir)
 
     # the model pth will looks like:
-    # /nas/shared/GAIR/fan/out/tinyllama_0_7b_cpt_iter2_25B/iter-160000-ckpt.pth
     # sort model according to step number `xxxxxx` extracted from `iter-xxxxxx-ckpt.pth``
     model_info_list = []
     for file in os.listdir(litgpt_model_dir):
