@@ -1,0 +1,684 @@
+
+
+
+/* Define CSS Variables */
+:root {
+    --primary-color: #f6f6f6;
+    --secondary-color: #222;
+    --accent-color: #00b4d8;
+    --light-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.8);
+    --header-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    --section-background: #333;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--primary-color);
+    font-size: 100%;
+    width: 100vw;
+    scroll-behavior: smooth;
+    position: fixed; 
+    overscroll-behavior: none;
+  }
+  
+  /* @keyframes moveBackground {
+    0% {
+      background-position: 0% 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  } */
+
+  @keyframes bounceBackground {
+    0% {
+        background-position: 0 0;
+    }
+    40% {
+        background-position: 70% -10px;
+    }
+    60% {
+        background-position: 80% 10px;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes elasticBackground {
+    0% {
+        background-position: 0 0;
+    }
+    40% {
+        background-position: 70% -10px;
+    }
+    60% {
+        background-position: 80% 10px;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes fadeInOutBackground {
+    0% {
+        opacity: 0;
+        background-position: 0 0;
+    }
+    50% {
+        opacity: 0.7;
+        background-position: 50% 0;
+    }
+    
+    100% {
+        opacity: 1;
+        background-position: 100% 0;
+    }
+}
+
+
+
+  #loading-screen {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url('/static/images/prox-logo.png');
+    background-repeat: repeat; /* 让背景图片无缝平铺 */
+    background-size: auto; /* 自动调整图片大小以适应平铺 */
+    background-position: 0 0; /* 确保从左上角开始 */
+    background-color: var(--secondary-color);
+  
+    /* 应用平滑循环动画 */
+    /* animation: moveBackground 10s linear forwards; */
+    /* animation: bounceBackground 10s ease-in-out infinite; */
+    /* animation: elasticBackground 10s ease-in-out infinite; */
+    animation: fadeInOutBackground 10s ease-in-out infinite;
+}
+
+#content {
+    background-image: url('/static/images/prox-logo.png');
+    background-repeat: repeat; /* 让背景图片无缝平铺 */
+    background-size: auto; /* 自动调整图片大小以适应平铺 */
+    background-position: 0 0; /* 确保从左上角开始 */
+    z-index: -1;
+    background-color: var(--secondary-color);
+  
+    /* 应用平滑循环动画 */
+    /* animation: moveBackground 10s linear forwards; */
+    /* animation: bounceBackground 10s ease-in-out infinite; */
+    /* animation: elasticBackground 10s ease-in-out infinite; */
+    animation: fadeInOutBackground 10s ease-in-out infinite;
+
+}
+
+
+
+
+  /* Header Styling */
+  .header-top-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 40vh;
+    left: auto;
+    height: 10vh;
+    width: 100vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  }
+  
+  /* Logo Styling */
+  .logo-screen {
+    font-size: 3vw;
+  }
+  
+  .loading-bar-outline {
+    height: 2vh;
+    width: 60vw;
+  
+    position: absolute;
+    top: 55vh;
+    left: auto;
+    border-radius: 15px;
+  
+    border: solid white;
+  }
+  
+  .loading-bar {
+    height: 100%;
+    width: 0%;
+    background-color: white;
+    
+    animation: load 6s linear forwards;
+    border-radius: 10px;
+  
+    opacity:0.5;
+  }
+  
+  @keyframes load {
+    from {
+      width: 0%;
+    }
+    to {  
+      width: 100%;
+    }
+  }
+  
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: var(--primary-color);
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Navigation Link Styling */
+  header a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 2vw;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  header a:hover {
+    color: var(--accent-color);
+  }
+  
+  /* Header Top Styling */
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: auto;
+    left: auto;
+    height: 20vh;
+    width: 100vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  
+    opacity: 0;
+  }
+  
+  /* Logo Styling */
+  .logo,
+  .smaller-logo,
+  .even-smaller-logo {
+    font-weight: bold;
+  }
+  
+  .logo {
+    font-size: 9vw;
+    text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
+  
+  }
+  
+  .smaller-logo {
+    font-size: 3em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .even-smaller-logo {
+    font-size: 2em;
+  }
+  
+  .header-top-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    position: absolute;
+    top: 25vh;
+    left: auto;
+  
+    height: 10vh;
+  
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  
+    gap: 1em;
+  
+    opacity: 0;
+  }
+  
+  /* Team Names Styling */
+  .team-names {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  
+    position: absolute;
+    top: 40vh;
+    left: auto;
+  
+    width: 300vw;
+  
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  
+    opacity: 0;
+  }
+  
+  .names {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+    width: 20.3em;
+  
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.625em;
+    padding: 1.25em;
+    flex-basis: calc(33.33% - 6.25em);
+  }
+  
+  .first-names,
+  .second-names {
+    font-size: 1.5em;
+  }
+  
+  .team-names p {
+    margin: 0;
+  }
+  
+  #navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  
+    position: absolute;
+    bottom: -50vh;
+  
+    height: 5vh;
+    width: 50vw;
+  
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  
+    padding: 1em;
+  
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 0.625em;
+  }
+  
+  #navigation_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    margin-right: 1.5vw;
+    margin-left: 1.5vw;
+  }
+  
+  .logo-container {
+    position: absolute;
+    bottom: -50vh;
+  }
+  
+  .berkeley-logo {
+    height: 10vh;
+  }
+  
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  #navigation-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+  
+    position: absolute;
+    top: 25vh;
+    left: -30vw;
+  
+    width: 18vw;
+    height: 50vh;
+  
+    padding: 1vw;
+  
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 0.625em;
+  }
+  
+  #navigation-left a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 2vw;
+    transition: color 0.3s ease-in-out;
+  
+    opacity: 0.5;
+  }
+  
+  #navigation-left a:hover {
+    color: var(--accent-color);
+  }
+  
+  .please-scroll, .please-scroll-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    position: absolute;
+    bottom: 1vh;
+  
+    opacity: 1;
+    /* color: hsl(204, 86%, 53%); */
+    text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.6);
+  }
+  
+  #ellipse {
+      width: 3vh;
+      height: 5vh;
+      border: 3px solid #ffffff;
+      border-radius: 40%;
+      background: transparent;
+  }
+  #ellipse::before {
+      content: "";
+      position: absolute;
+      background: #ffffff;
+      width: 1vh;
+      height: 1vh;
+      border-radius: 50%;
+      left: 50%;
+      bottom: 40%;
+      transform: translate(-50%, -50%);
+  }
+  
+  .please-scroll span {
+    font-size: 2.2em;
+  }
+  
+  .please-scroll-2 span {
+    font-size: 3em;
+  }
+  
+  section {
+    height: 80vh;
+    width: 70vw;
+  
+    position: absolute;
+    top: 100vh;
+    left: 24vw;
+  }
+  
+  /* Video Container Styling */
+  .video-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    position: absolute;
+  
+    top: 0;
+    left: -10vw;
+  
+    width: 37vw;
+    height: 21vw;
+  }
+  
+  #intro_video {
+    width: 12.5vw;
+    height: 7vw;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  
+    opacity: 0;
+  }
+  
+  #paper_intro {
+    position: absolute;
+  
+    top: 0vh;
+    left: 40vw;
+  
+    width: 30vw;
+    height: 21vw;
+  }
+  
+  #paper_text {
+    font-size: 1.25vw;
+  }
+  
+  /* Paper Intro Styling */
+  #paper_list {
+    display: flex;
+    flex-direction: column;
+  
+    position: absolute;
+  
+    bottom: 22.5vh;
+    left: 0vw;
+  
+    width: 62vw;
+    height: 12vh;
+  }
+  
+  #screenshot_text {
+    font-weight: bold;
+    font-size: 2em;
+    border-bottom: 1px solid white;
+  
+    opacity: 0;
+  }
+  
+  #screenshot_text a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 2vw;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  #screenshot_text a:hover {
+    color: var(--accent-color);
+  }
+  
+  
+  #paper_screenshots a {
+    position: absolute;
+    left: -5vw;
+  
+    max-height: 8.484vw;
+    width: 6vw;
+  
+    margin-top: 1vh;
+  
+    opacity: 0;
+  }
+  
+  #paper_screenshots a:hover {
+    scale: 1.2;
+  }
+  
+  
+  
+  #paper_screenshots img {
+    height: 8.484vw;
+    width: 6vw;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+  }
+  
+  #download{
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    gap: 5vh;
+  }
+  
+  /* Navigation Link Styling */
+  #download a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  #download  p {
+    font-weight: 600;
+    font-size: 270%;
+    margin: 0;
+  }
+  
+  #download  span {
+    opacity: 0.6;
+    font-size: 110%;
+  }
+  
+  #kartik{
+    position: absolute;
+  
+    left: 100vw;
+    top: -6vh;
+  
+    opacity: 0;
+  }
+  
+  #raiymbek{
+    position: absolute;
+  
+    left: 100vw;
+    top: -6vh;
+  
+    opacity: 0;
+  }
+  
+  #malik{
+    position: absolute;
+  
+    left: 100vw;
+    top: -6vh;
+    
+    opacity: 0;
+  }
+  
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    width: 20vw;
+    height: 60vh;
+  
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  
+    padding: 1vw;
+  }
+  
+  .portrait {
+    height: 13vw;
+    width: 13vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  }
+  
+  .name a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.75vw;
+    transition: color 0.3s ease-in-out;
+  
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  }
+  
+  .name a:hover {
+    color: var(--accent-color);
+  }
+  
+  .status {
+    font-size: 0.75vw;
+  
+    opacity: 0.7;
+  
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  }
+  
+  .organization{
+    font-size: 1.75vw;
+  
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  }
+  
+  
+  /* Plot Styling */
+  .plot {
+    width: 70vw;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.5em;
+  }
+  
+  #stats {
+    width: 1600px;
+    height: 90vh;
+    display: flex;
+  }
+  
+  /* Scroll to Top Button Styling */
+  #goToTop {
+    display: inline;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    background-color: #f8f9fa;
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+    text-decoration: none;
+    opacity: 0;
+  }
+  
+  #goToTop:hover {
+    opacity: 0.8;
+  }
+  
+  @font-face {
+    font-family: 'CustomFont';
+    src: url('../NanumBrushScript-Regular.ttf') format('truetype');
+  }
