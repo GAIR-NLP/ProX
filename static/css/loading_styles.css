@@ -93,7 +93,7 @@
     align-items: center;
     justify-content: center;
 
-    background-image: url('../images/prox-logo.png');
+    background-image: url('./static/images/prox-logo.png');
     background-repeat: repeat; /* 让背景图片无缝平铺 */
     background-size: auto; /* 自动调整图片大小以适应平铺 */
     background-position: 0 0; /* 确保从左上角开始 */
@@ -107,7 +107,7 @@
 }
 
 #content {
-    background-image: url('../images/prox-logo.png');
+    background-image: url('../../static/images/prox-logo.png');
     background-repeat: repeat; /* 让背景图片无缝平铺 */
     background-size: auto; /* 自动调整图片大小以适应平铺 */
     background-position: 0 0; /* 确保从左上角开始 */
