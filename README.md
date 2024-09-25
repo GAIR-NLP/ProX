@@ -6,7 +6,7 @@
 <a href="https://huggingface.co/gair-prox" target="_blank">
     <img alt="Models" src="https://img.shields.io/badge/🤗-HuggingFace Repo-blue" />
 </a>
-<a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank">
+<a href="https://arxiv.org/abs/2409.17115" target="_blank">
     <img alt="Paper" src="https://img.shields.io/badge/📑-Paper-blue" />
 </a>
 <a href="https://gair-nlp.github.io/ProX/" target="_blank">
@@ -42,18 +42,18 @@
 
 ## 🚀 Introduction
 
-**ProX** is a lm-based data refinement framework to improve the quality of data used in pre-training large language models. Instead of relying on human experts to create rules, ProX treats data refinement like a programming task. This allows models to automatically clean and improve each data example at a large scale.
+🫐 **ProX** is a lm-based data refinement framework to improve the quality of data used in pre-training large language models. Instead of relying on human experts to create rules, ProX treats data refinement like a programming task. This allows models to automatically clean and improve each data example at a large scale.
 
 ![alt text](static/images/prox-intro.png)
 
-Currently, ProX curated data have gone through 2 levels programming + executing: doc-level and chunk-level:
+Currently, 🫐 ProX curated data have gone through 2 levels of programming + executing: doc-level and chunk-level:
 ![alt text](static/images/prox-framework.png)
 **Key Features**:
 
 - Better Performance: Models trained with ProX-refined data perform over 2% better than those trained with raw or rule-based data.
-- Domain Flexibility: ProX works well across different domains, boosting accuracy by up to 20% in tasks like math, without needing special manual adjustments.
-- Efficient and Scalable: Even small models (as little as 0.3B parameters) can refine data effectively, similar to human experts, saving resource compared to LLM-based data synthesis.
-- Cost-Effective: In general, ProX could significantly save on training compute while maintaining strong results.
+- Domain Flexibility: 🫐 ProX works well across different domains, boosting accuracy by up to 20% in tasks like math, without needing special manual adjustments.
+- Efficient and Scalable: Even small models (as little as 0.3B parameters) can refine data effectively, similar to human experts, saving resources compared to LLM-based data synthesis.
+- Cost-Effective: In general, 🫐 ProX could significantly save on training computing while maintaining strong results.
 
 ## Setup
 
@@ -127,7 +127,7 @@ pip install -r requirements.txt
 
 We provide over 100B high quality general domain corpus and ~5B high quality math corpus. You can directly train your own model using these data.
 
-Here we provide an example to download, tokenize, train a model using ProX data with litgpt, finally with thorough evaluation.
+Here we provide an example to download, tokenize, train a model using 🫐 ProX data with litgpt, finally with thorough evaluation.
 Feel free to modify the script to fit your own needs.
 
 First step is to setup your environment variables:
@@ -245,8 +245,13 @@ Currently, we release the following code and data:
 
 ## Citation
 
-Please cite ProX paper if you find our work helpful:
+Please cite 🫐 ProX paper if you find our work helpful:
 
 ```bibtex
-TBD
+@article{zhou2024programming,
+  title={Programming Every Example: Lifting Pre-training Data Quality like Experts at Scale},
+  author={Zhou, Fan and Wang, Zengzhi and Liu, Qian and Li, Junlong and Liu, Pengfei},
+  journal={arXiv preprint arXiv:2409.17115},
+  year={2024}
+}
 ```
