@@ -9,17 +9,17 @@
 <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank">
     <img alt="Paper" src="https://img.shields.io/badge/📑-Paper-blue" />
 </a>
-<a href="https://gair-nlp.github.io/program-every-example/" target="_blank">
+<a href="https://gair-nlp.github.io/ProX/" target="_blank">
 <img alt="Project Page" src="https://img.shields.io/badge/🧪-Project Page-blue" />
 </a>
 <a href="https://opensource.org/license/apache-2-0" target="_blank">
     <img alt="License: apache-2-0" src="https://img.shields.io/github/license/saltstack/salt" />
 </a>
-<a href="https://github.com/GAIR-NLP/program-every-example" target="_blank">
-    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/GAIR-NLP/program-every-example?style=social" />
+<a href="https://github.com/GAIR-NLP/ProX" target="_blank">
+    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/GAIR-NLP/ProX?style=social" />
 </a>
-<a href="https://github.com/GAIR-NLP/program-every-example/issues" target="_blank">
-    <img alt="Open Issues" src="https://img.shields.io/github/issues-raw/GAIR-NLP/program-every-example" />
+<a href="https://github.com/GAIR-NLP/ProX/issues" target="_blank">
+    <img alt="Open Issues" src="https://img.shields.io/github/issues-raw/GAIR-NLP/ProX" />
 </a>
 
 ## 🔥 News
@@ -60,7 +60,7 @@ Currently, ProX curated data have gone through 2 levels programming + executing:
 First, we have to install all the libraries listed in requirements.txt
 
 ```bash
-git clone https://github.com/GAIR-NLP/program-every-example.git prox
+git clone https://github.com/GAIR-NLP/ProX.git prox
 cd prox
 conda create -n prox python=3.10
 conda activate prox
@@ -97,6 +97,7 @@ Then, we can install lighteval & math-eval for evaluation
 <p>
 
 ```bash
+conda create -n lmeval python=3.10
 git clone https://github.com/huggingface/lighteval.git
 cd lighteval
 pip install -e .
