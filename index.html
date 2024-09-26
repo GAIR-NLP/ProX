@@ -1,55 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MME-RealWorld: Welcome</title>
-  <link rel="icon" href="./static/images/prox-logo.png">
-  <!-- External Libraries and Stylesheets -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.1/css/OverlayScrollbars.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-  <!-- External Scripts -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-  <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="static/css/loading_styles.css">
-  <script src="static/js/loading_scripts.js"></script>
-  <style>
-    #paper, #download, #team, #explore, #stats {
-      display: none;
-    }
-    html, body {
-      overflow: hidden;
-    }
-  </style>
-</head>
-<body>
-  <script>
-    document.addEventListener('click', function() {
-        window.location.href = 'homepage.html'; 
-    });
-  </script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProX: Lifting Pre-training Data Quality Like Experts</title>
+    <link rel="icon" href="./static/images/prox-logo.png" />
+    <!-- External Libraries and Stylesheets -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.1/css/OverlayScrollbars.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- External Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="static/css/loading_styles.css" />
+    <script src="static/js/loading_scripts.js"></script>
+    <style>
+      #paper,
+      #download,
+      #team,
+      #explore,
+      #stats {
+        display: none;
+      }
+      html,
+      body {
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      document.addEventListener("click", function () {
+        window.location.href = "homepage.html";
+      });
+    </script>
 
-  
-
-  <div id="loading-screen"></div>
-  <div id="content">
-    <!-- Navbar Section -->
-    <header class="header">
-      <div class="header-top" style="top: 30%;">
-        <div class="logo" style="font-family: 'CustomFont', sans-serif; font-size: 200px;">ProX</div>
-        <div class="please-scroll-2" style="top: 130%;opacity: 1">
-          <!-- <span id="reminder" style="font-size: 40px; opacity: 1;">Programming Every Example: Lifting Pre-training Data Quality Like Experts at Scale</span> -->
-          <!-- <span id="reminder" style="font-size: 40px; opacity: 1;"> in High-Resolution Real-World Scenarios that are Difficult for -->
+    <div id="loading-screen"></div>
+    <div id="content">
+      <!-- Navbar Section -->
+      <header class="header">
+        <div class="header-top" style="top: 30%">
+          <div
+            class="logo"
+            style="font-family: 'CustomFont', sans-serif; font-size: 200px"
+          >
+            ProX
+          </div>
+          <div class="please-scroll-2" style="top: 130%; opacity: 1">
+            <!-- <span id="reminder" style="font-size: 40px; opacity: 1;">Programming Every Example: Lifting Pre-training Data Quality Like Experts at Scale</span> -->
+            <!-- <span id="reminder" style="font-size: 40px; opacity: 1;"> in High-Resolution Real-World Scenarios that are Difficult for -->
+          </div>
         </div>
-      </div>
-      <div class="please-scroll",style="opacity:100">
-        <span id="reminder" >Please click to continue</span>
-      </div>
-    </header>
-    <nav id="navigation-left"></nav>
-  </div>
-</body>
+        <div class="please-scroll" ,style="opacity:100">
+          <span id="reminder">Please click to continue</span>
+        </div>
+      </header>
+      <nav id="navigation-left"></nav>
+    </div>
+  </body>
 </html>
