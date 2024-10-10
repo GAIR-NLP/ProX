@@ -1,0 +1,7 @@
+# Input Data configs
+data_path: ${RAW_DATA_DIR}/<doc_refining_path>
+
+# Save configs
+save_path: ${RAW_DATA_DIR}/<chunk_refining_path>
+save_name: "prox"
+save_interval: 100000
