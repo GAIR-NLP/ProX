@@ -24,6 +24,7 @@
 
 ## 🔥 News
 
+- **[10 October, 2024]:** 🎉 We release the codebase for large scale data refining, together with the refining models on 🤗Huggingface: [Prox-Refining-LMs](https://huggingface.co/collections/gair-prox/prox-refining-models-6707cf820a16d830fbf434dd).
 - **[19 September, 2024]:** 🎉 We open-sourced [pre-training corpus](https://huggingface.co/collections/gair-prox/prox-dataset-66e81c9d560911b836bb3704) curated by our ProX framework, containing > 100B high quality general domain corpus and ~5B high quality math corpus, together with models([ProX](https://huggingface.co/collections/gair-prox/prox-general-models-65f1674f0607712c4d6eec76) and [ProXMath](https://huggingface.co/collections/gair-prox/prox-math-models-66e92c3e5d54b27612286eb9)) trained using these data.
 
 ## Table of Contents
@@ -122,6 +123,33 @@ pip install -r requirements.txt
 
 </p>
 </details>
+
+## Large Scale Data Refining
+
+If you want to refine your own data with ProX, please make sure you setup a new environment. 
+
+```bash
+# create a new conda env
+conda create -n refining python=3.10
+conda activate refining
+# install requirements
+pip install -r refining_requirements.txt
+```
+
+We released 2 families of refining models:
+
+- WebRefining-LM: for general web domain, including [web-doc-refining-lm](https://huggingface.co/gair-prox/web-doc-refining-lm) and [web-chunk-refining-lm](https://huggingface.co/gair-prox/web-chunk-refining-lm)
+- MathRefining-LM: for math domain, including [math-doc-refining-lm](https://huggingface.co/gair-prox/math-doc-refining-lm) and [math-chunk-refining-lm](https://huggingface.co/gair-prox/math-chunk-refining-lm)
+
+You can refer to the following example slurm scripts to refine large scale pre-training data.
+
+```bash
+# 1. doc-level refining
+sbatch scripts/data_gen/example_doc_refining.sh
+
+# 2. chunk-level refining
+sbatch scripts/data_gen/example_chunk_refining.sh
+```
 
 ## Training on ProX curated data
 
@@ -240,7 +268,8 @@ Currently, we release the following code and data:
 - [✅] [Data](https://huggingface.co/collections/gair-prox/prox-dataset-66e81c9d560911b836bb3704)
 - [✅] [Training Code](./train)
 - [✅] [Evaluation Scripts](./scripts/eval)
-- [🚧] [Large Scale Data Refining]()
+- [✅] [Large Scale Data Refining](./scripts/data_gen)
+- [✅] [Refining Model Weights](https://huggingface.co/collections/gair-prox/prox-refining-models-6707cf820a16d830fbf434dd)
 - [🚧] ...
 
 ## Citation
@@ -255,3 +284,13 @@ Please cite 🫐 ProX paper if you find our work helpful:
   year={2024}
 }
 ```
+
+## Acknowledgements
+
+We thank the following projects that provide great help for this work:
+
+- [🧠 TinyLlama](https://github.com/jzhang38/TinyLlama)
+- [🔥 FlashAttention](https://github.com/Dao-AILab/flash-attention)
+- [🧩 DataTrove](https://github.com/huggingface/datatrove)
+- [🔍 LightEval](https://github.com/huggingface/lighteval)
+- [🧮 MathEval](https://github.com/GAIR-NLP/math-evaluation-harness)
