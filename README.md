@@ -200,9 +200,10 @@ You can also run the training script in one local node 👇
 
 ```bash
 # 4.1 train locally
+cd train
 export PYTHONPATH=$PYTHONPATH:$TINYLM_WORK_DIR/train
-python -m train.train \
-    --config_path $TINYLM_WORK_DIR/configs/tlm/<your_config>.yaml
+python -m pretrain.tinyllama \
+    --config_path $TINYLM_WORK_DIR/configs/general/<your_config>.yaml
 
 # 4.2 convert to HF model
 python -m scripts.weight_conversion.batch_model_conversion \
