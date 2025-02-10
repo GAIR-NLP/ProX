@@ -38,6 +38,7 @@
   - [Evaluation](#evaluation)
     - [General Evaluation](#general-evaluation)
     - [Math Evaluation](#math-evaluation)
+  - [Projects Using ProX](#projects-using-prox)
   - [Citation](#citation)
   - [Acknowledgements](#acknowledgements)
 
@@ -272,6 +273,12 @@ Currently, we release the following code and data:
 - [✅] [Large Scale Data Refining](./scripts/data_gen)
 - [✅] [Refining Model Weights](https://huggingface.co/collections/gair-prox/prox-refining-models-6707cf820a16d830fbf434dd)
 - [🚧] ...
+
+## Projects Using ProX
+
+- [Sailor2: Sailing in South-East Asia with Inclusive Multilingual LLMs](https://sea-sailor.github.io/blog/sailor2/)
+- [Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach](https://arxiv.org/abs/2502.05171)
+
 
 ## Citation
 
