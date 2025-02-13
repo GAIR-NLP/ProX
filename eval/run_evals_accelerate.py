@@ -64,7 +64,7 @@ def get_parser():
         "--custom_tasks",
         type=str,
         default=None,
-        help="Path to a file with custom tasks (a TASK list of dict and potentially prompt formating functions)",
+        help="Path to a file with custom tasks (a TASK list of dict and potentially prompt formatting functions)",
     )
     group.add_argument(
         "--tasks",
