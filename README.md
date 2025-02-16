@@ -24,6 +24,7 @@
 
 ## 🔥 News
 
+- **[17 February, 2025]:** 🎉 We release **[DCLM-pro](https://huggingface.co/datasets/gair-prox/DCLM-pro)**, a further cleaned verion of [DCLM-baseline](https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0-parquet) containing > 500B tokens ready for pre-training. Preliminary experiments show that models trained on DCLM-pro can achieve **>1.5%** performance gain on average within 50B tokens.
 - **[10 October, 2024]:** 🎉 We release the codebase for large scale data refining, together with the refining models on 🤗Huggingface: [Prox-Refining-LMs](https://huggingface.co/collections/gair-prox/prox-refining-models-6707cf820a16d830fbf434dd).
 - **[19 September, 2024]:** 🎉 We open-sourced [pre-training corpus](https://huggingface.co/collections/gair-prox/prox-dataset-66e81c9d560911b836bb3704) curated by our ProX framework, containing > 100B high quality general domain corpus and ~5B high quality math corpus, together with models([ProX](https://huggingface.co/collections/gair-prox/prox-general-models-65f1674f0607712c4d6eec76) and [ProXMath](https://huggingface.co/collections/gair-prox/prox-math-models-66e92c3e5d54b27612286eb9)) trained using these data.
 
