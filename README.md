@@ -280,6 +280,7 @@ Currently, we release the following code and data:
 - [Sailor2: Sailing in South-East Asia with Inclusive Multilingual LLMs](https://sea-sailor.github.io/blog/sailor2/)
 - [YuLan-Mini: An Open Data-efficient Language Model](https://arxiv.org/abs/2412.17743)
 - [Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach](https://arxiv.org/abs/2502.05171)
+- [How to Predict Best Pretraining Data with Small Experiments](https://arxiv.org/abs/2504.11393)
 
 
 ## Citation
