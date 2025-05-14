@@ -126,6 +126,28 @@ pip install -r requirements.txt
 </p>
 </details>
 
+
+<details>
+<summary>
+<b>Pre-training Corpora Download</b>
+</summary>
+<p>
+
+To facilitate straightforward and meaningful apple-to-apple comparisons in follow-up work, we provide the download details for the pre-training corpora we used:
+
+**C4**: We downloaded the full set from the following link: https://huggingface.co/datasets/allenai/c4/tree/main/en
+
+**FineWeb**: We employed a 350B-token sample from https://huggingface.co/datasets/HuggingFaceFW/fineweb/tree/main/sample/350BT, randomly shuffled the data, split it into 7 dumps, and conducted experiments using the first two dumps.
+
+**DCLM-baselines**: We conducted experiments on a global shard, i.e., https://huggingface.co/datasets/mlfoundations/dclm-baseline-1.0/tree/main/global-shard_01_of_10. We applied our ProX on the first five global shards for open-source release, i.e., [DCLM-Pro](https://huggingface.co/datasets/gair-prox/DCLM-pro)
+
+**RedPajama-V2**: Please refer to the scripts: `auto_download_redpajama.sh` and `reshuffle_data.py` located in the `scripts/data_download` folder for instructions on downloading and shuffling the data.
+
+
+
+</p>
+</details>
+
 ## Large Scale Data Refining
 
 If you want to refine your own data with ProX, please make sure you setup a new environment. 
